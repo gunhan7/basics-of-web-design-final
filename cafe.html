@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Viewport, bir web sayfasında kullanıcının görüntüleyebildiği alandır. 
+      Viewport'lar cihaza göre farklılık gösterir; mobil cihazlarda daha küçük ebatta iken, masaüstü bilgisayarlarda ise ebatı büyüktür.-->
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="sayfa2.css">
+    <link rel="stylesheet" href="imageslider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="sosyalmedya.css">
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--<title>Responsive Navigation Menu Bar</title>-->
+    
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<title>Mimarlik</title>
+
+
+</head>
+<body>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="#">Mimarlık</a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#"></a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li class="nav-link">
+                        <a href="sayfa2.html">
+                            <i class="bx bx-home-alt icon"></i>
+                            <span class="text nav-text"></span>
+                        </a>
+                    </li>
+                    <li><a href="nedir.html">MIMARLIK
+                        <i class=""></i>
+                        </a>
+
+                    </li>
+                    <li><a href="turleri.html">TURLERI</a></li>
+                     <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="haberlerr.html">HABERLER</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<script>
+
+const body = document.querySelector("body"),
+      nav = document.querySelector("nav"),
+      modeToggle = document.querySelector(".dark-light"),
+      searchToggle = document.querySelector(".searchToggle"),
+      sidebarOpen = document.querySelector(".sidebarOpen"),
+      siderbarClose = document.querySelector(".siderbarClose");
+
+      let getMode = localStorage.getItem("mode");
+          if(getMode && getMode === "dark-mode"){
+            body.classList.add("dark");
+          }
+
+// js code to toggle dark and light mode
+      modeToggle.addEventListener("click" , () =>{
+        modeToggle.classList.toggle("active");
+        body.classList.toggle("dark");
+
+        // js code to keep user selected mode even page refresh or file reopen
+        if(!body.classList.contains("dark")){
+            localStorage.setItem("mode" , "light-mode");
+        }else{
+            localStorage.setItem("mode" , "dark-mode");
+        }
+      });
+
+// js code to toggle search box
+        searchToggle.addEventListener("click" , () =>{
+        searchToggle.classList.toggle("active");
+      });
+ 
+      
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+    nav.classList.add("active");
+});
+
+body.addEventListener("click" , e =>{
+    let clickedElm = e.target;
+
+    if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+        nav.classList.remove("active");
+    }
+});
+</script>
+<BR><BR><BR><BR><BR><BR><BR>
+    <div align="center">
+        <img src="cafe.jpg"lt="pol" width="800" height="500">
+        </div>
+        <br>
+    <h1 align="center">CAFE RESTORAN MEKAN TASARIMLARI</h1>
+    <br>
+    <hr>
+    <br>
+    <h1 align="center">Cafe Restoran Mimarları</h1>
+    <br>
+    <p>Cafe restoran iç mekan tasarımları mekanın konseptine ve geçirilen zamana uyumlu bir şekilde tasarlanmalıdır. Bunun nedeni ise bu alanların genellikle sosyalleşme alanları olmasından kaynaklanmaktadır. Bu açıdan bu mekanlar, dikkat çekici bir tasarıma sahip olmalıdır. Müşteri psikolojisine hakim olabilecek bir iç mimar ile beraber çalışıldığı takdirde ise etkili ve işlevsel alanlar yaratılmaktadır. Mimarlar genel anlamda müşterinin hafızasında kalıcılık sağlayabilecek unsurları ön plana çıkarırken diğer unsurları ise arka plana itmeyi tercih etmektedir. Bir cafe ve ya restaurant menüsünde sunulan yiyecek ve içeceklerin lezzetini iç mekan unsurlarının bütünlediği ve unutulmaz kıldığı göz ardı edilmemelidir. Müşterilere harika bir deneyim yaşatmada etkili olan şey iç mimar olduğundan dolayı bunun seçimini yaparken dikkatli olmak gerekmektedir.</p>
+    <br>
+    <h1 align="center">Restoran Mimarları</h1>
+    <br>
+    <p>Restoran, iç mimar ile daha iyi bir hale gelecek şekilde organize edilmektedir. Belirli bir konsepte sahip olan iç mekanlar genel anlamda renk, doku, ışık, ses, klimatik faktörleri ve bunların uyumunu sağlayan yan faktörleri içermektedir. Masaların, sandalyelerin, tercih edilen kumaşaların, aydınlatmanın ve aklınıza gelebilecek tüm bileşenlerin dikkat çekici bir yanı ve bütünlüğü vardır.  Tüm bu unsurların uyumlu dansına konsept denmektedir. Fastfood ürün restoranlarında hızlı hızlı müşterinin yemeğini yiyip kalkmasına yardımcı olabilecek bir iç mimari kararlar ve masa dizimi söz konusu olmaktadır. Akşam yemeği için masa ayarlamış bir çiftin yemek yiyeceği lüks bir balık restoranında ise daha geniş alanlar, daha özenli masa dizilimi, daha naif akustik ve aydınlatma kararları tercih edilmektedir. Bu açıdan ihtiyaca ve isteklere yönelik bir mimari söz konusu olmaktadır ve iç mimar sayesinde tüm süreç daha iyi yönetilmektedir.</p>
+    <br>
+    <h1 align="center">Restoran Dekorasyonu Yapılırken Dikkat Edilmesi Gerekenler</h1>
+    <br>
+    <p>Restoran dekorasyonu yapılırken dikkat edilmesi gereken unsurlar her işletme sahibini meraklandırır. İç mimar bir restoranın açılma fikrinden hemen sonra devreye giren ve teknik uzmanlığı ile mekandaki yaşam alanlarını en iyi şekilde belirleyen kişidir. Genel anlamda bir dekorasyonda her zaman amaca yönelik bir tasarım yapılmaktadır. Bu amacın belirlenmesinde ise en önemli şey mekanın kime hizmet verdiği ve bu hizmeti verirken konseptinin ne olduğudur. Müşterilere ve belirli bir kesime yönelik tasarım yapan mimarlar müşteri dostu bir dekorasyona imza atmaktadır. Restoranın sadece masaları ve dizilimi değil genel anlamda her şeyi müşteri için çok önemlidir. Bunun en büyük nedeni ise mekanın tasarımının, vizyonu belirlemesinden kaynaklanmaktadır. Bu yüzden karşılama, giriş kısmı ve lavaboların tasarımına kadar her alanda özenilerek dekorasyon yapılmalıdır.</p>
+    <div class="ikonlar">
+        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="google"><i class="fa fa-google"></i></a>
+        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+        </div>
+    
+</body>
+</html>
