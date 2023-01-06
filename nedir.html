@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="sayfa2.css">
+    <link rel="stylesheet" href="imageslider.css">
+    <link rel="stylesheet" href="nedirr.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="sosyalmedya.css">
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--<title>Responsive Navigation Menu Bar</title>-->
+    
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<title>Mimarlik</title>
+
+</head>
+<body>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="sayfa2.html">Mimarlık</a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#"></a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li class="nav-link">
+                        <a href="sayfa2.html">
+                            <i class="bx bx-home-alt icon"></i>
+                            <span class="text nav-text"></span>
+                        </a>
+                    </li>
+                    <li><a href="nedir.html">MİMARLIK
+                        <i class=""></i>
+                        </a>
+                    </li>
+                    <li><a href="turleri.html">TÜRLERİ</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="haberlerr.html">HABERLER</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<script>
+    const body = document.querySelector("body"),
+      nav = document.querySelector("nav"),
+      modeToggle = document.querySelector(".dark-light"),
+      searchToggle = document.querySelector(".searchToggle"),
+      sidebarOpen = document.querySelector(".sidebarOpen"),
+      siderbarClose = document.querySelector(".siderbarClose");
+
+      let getMode = localStorage.getItem("mode");
+          if(getMode && getMode === "dark-mode"){
+            body.classList.add("dark");
+          }
+
+// js code to toggle dark and light mode
+      modeToggle.addEventListener("click" , () =>{
+        modeToggle.classList.toggle("active");
+        body.classList.toggle("dark");
+
+        // js code to keep user selected mode even page refresh or file reopen
+        if(!body.classList.contains("dark")){
+            localStorage.setItem("mode" , "light-mode");
+        }else{
+            localStorage.setItem("mode" , "dark-mode");
+        }
+      });
+
+// js code to toggle search box
+        searchToggle.addEventListener("click" , () =>{
+        searchToggle.classList.toggle("active");
+      });
+ 
+      
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+    nav.classList.add("active");
+});
+
+body.addEventListener("click" , e =>{
+    let clickedElm = e.target;
+
+    if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+        nav.classList.remove("active");
+    }
+});
+</script>
+<BR><BR><BR><BR><BR><BR><BR>
+<h1 align="center">MİMARLİK NEDİR?</h1>
+<HR>
+    <br><br>
+      <P>Mimar, yeni bina tasarlama, eski binaları restore etme ve mevcut binaları kullanmanın yeni yollarını geliştirme ile sorumlu olan kişilere verilen mesleki unvandır.
+         Mimar, inşaat projelerinin başlangıç aşamasından tamamlanma aşamasına kadar görev alır.
+        </P>
+        <P>Mimarlık, teknik ve sanat alanında gelişimlerin
+            merkezinde ve toplumsal alanın tüm düzlemlerinde
+            var olan çok yönlü disiplinlerarası bir anabilim
+            dalıdır. Sanat ve teknolojinin iç içe olduğu bir meslek
+            olan mimarlık, çevremizdeki her türlü mimari yapıya
+            hayat vermektedir.
+          </P>
+        <p>
+            Mimarlık Bölümü, alanında bilimsel eserler üreten ve
+uygulamalar gerçekleştiren zengin akademik kadrosu
+ile birçok mimarlık bölümünü destekleyen farklı
+faaliyetler yapmakta, mimarlık sahasında başarılı ve
+özgüvene sahip mimarlar yetiştirmektedir.
+Mezunlar, yapı ve tasarım sektöründe yer alan
+çalışma alanlarında görev alabilmektedir
+        </p>
+    <p>
+        Mimarlık eğitiminde temel amaç, analitik düşünme
+yeteneğine sahip, üç boyutlu düşünebilen, uygulamaya
+yönelik pratikleri sanatsal duyarlılıkla gerçekleştirebilen,
+mimarlık kültürünü ve mesleki etik değerlerini
+benimsemiş bireyler yetiştirmektir.
+• Bu anlayışla, üniversite-sanayi, üniversite-bakanlık,
+üniversite-yerel yönetim işbirliği kapsamında, kamu
+kurum ve kuruluşlarına üst düzeyde AR-GE ve mimari
+uygulama projeleri üretilmektedir.
+<p>''Mimar olmak, mekâna değer katmak demektir'' Bina
+    yapmak mimarlık değildir.
+    </p>
+<p>"Mimarlık için mekâna değer katmak gerekir. Yaptığım
+    işlerden ben değil, içinde yaşayanlar hoşlanmalı. İnsanlar
+    her gün gördükleri ve yaşadıkları mekânları sevmelidirler."
+    </p>
+    <div class="gallery" align="center">
+          <img src="ayasofya.jpg" alt="camii" width="600" height="400">
+        </a>
+      </div><br><br>
+    <h1 align="center">Çalışma Alanları & İş Olanakları</h1>
+<p>
+    Mimarlık Bölümü mezunları, kamu ve özel sektörün projelendirme ve inşaat
+birimlerinde tasarımcı, kontrolör ve uygulamacı olarak görev alabilir, ya da kendi
+iş yerlerini kurarak kamu ve özel sektör projelerini yürütebilirler
+</p>
+<p>
+    Mimarlık Bölümü mezunları, kamu ve özel sektörün projelendirme ve inşaat
+birimlerinde tasarımcı, kontrolör ve uygulamacı olarak görev alabilir, ya da kendi
+iş yerlerini kurarak kamu ve özel sektör projelerini yürütebilirler
+</p>
+<p>Şirketler, bankalar vb. kuruluşlarda sürekli görevli mimar olarak,
+</p>
+<p>
+     Şantiyelerde görev alarak,
+     Yapı sektörüne ilişkin malzemelerin tasarımında, üretim sürecinde,
+    pazarlamasında ve satış noktalarında, sergi vb. organizasyonların
+    hazırlanmasında,
+</p>
+<p>Mimarlık ve ilgili alanlarda dergi yayıncılığında ve
+     Akademisyen olarak çalışabilirler.</p><br><br>
+     <div class="gallery" align="center">
+        <img src="lotustapınak.jpg" alt="lotustapınak" width="600" height="400">
+      </a>
+      <div class="ikonlar">
+        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="google"><i class="fa fa-google"></i></a>
+        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+        </div>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Viewport, bir web sayfasında kullanıcının görüntüleyebildiği alandır. 
+      Viewport'lar cihaza göre farklılık gösterir; mobil cihazlarda daha küçük ebatta iken, masaüstü bilgisayarlarda ise ebatı büyüktür.-->
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="sayfa2.css">
+    <link rel="stylesheet" href="imageslider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="sosyalmedya.css">
+    <link rel="stylesheet" href="tablo1.css">
+    
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--<title>Responsive Navigation Menu Bar</title>-->
+    
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<title>Mimarlik</title>
+
+</head>
+<body>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="sayfa2.html">Mimarlık</a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#"></a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li class="nav-link">
+                        <a href="sayfa2.html">
+                            <i class="bx bx-home-alt icon"></i>
+                            <span class="text nav-text"></span>
+                        </a>
+                    </li>
+                    <li><a href="nedir.html">MİMARLIK</a>
+                        <i class=""></i>
+                        </a>
+
+                    </li>
+                    <li><a href="turleri.html">TÜRLERİ</a></li>
+                     <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="haberlerr.html">HABERLER</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<script>
+
+const body = document.querySelector("body"),
+      nav = document.querySelector("nav"),
+      modeToggle = document.querySelector(".dark-light"),
+      searchToggle = document.querySelector(".searchToggle"),
+      sidebarOpen = document.querySelector(".sidebarOpen"),
+      siderbarClose = document.querySelector(".siderbarClose");
+
+      let getMode = localStorage.getItem("mode");
+          if(getMode && getMode === "dark-mode"){
+            body.classList.add("dark");
+          }
+
+// js code to toggle dark and light mode
+      modeToggle.addEventListener("click" , () =>{
+        modeToggle.classList.toggle("active");
+        body.classList.toggle("dark");
+
+        // js code to keep user selected mode even page refresh or file reopen
+        if(!body.classList.contains("dark")){
+            localStorage.setItem("mode" , "light-mode");
+        }else{
+            localStorage.setItem("mode" , "dark-mode");
+        }
+      });
+
+// js code to toggle search box
+        searchToggle.addEventListener("click" , () =>{
+        searchToggle.classList.toggle("active");
+      });
+ 
+      
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+    nav.classList.add("active");
+});
+
+body.addEventListener("click" , e =>{
+    let clickedElm = e.target;
+
+    if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+        nav.classList.remove("active");
+    }
+});
+</script>
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 8</div>
+      <img src="foto1.jpg" style="width:100%">
+      <div class="text"></div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 8</div>
+      <img src="cek1.jpg" style="width:100%">
+      <div class="text"></div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 8</div>
+      <img src="foto3.jpg" style="width:100%">
+      <div class="text"></div>
+    </div>
+    
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 8</div>
+        <img src="villa.jpg" style="width:100%">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 8</div>
+        <img src="foto5.jpg" style="width:100%">
+        <div class="text"></div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">6 / 8</div>
+        <img src="icmekan3.jpg" style="width:100%">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">7 / 8</div>
+        <img src="sosyal6.webp" style="width:100%">
+        <div class="text"></div>
+      </div>
+        <div class="mySlides fade">
+          <div class="numbertext">8 / 8</div>
+          <img src="aydinlatma1.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+      </div>
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    
+    </div>
+    
+    <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    </script>
+       <div class="ikonlar">
+        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="google"><i class="fa fa-google"></i></a>
+        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+        </div>
+    <br><br><br><br>
+  <h1> Mimarlık nedir yazımıza gitmek ister misiniz?</h1>
+  <BR>
+    <h6> <a target="_blank" href="nedir.html">
+  <img src="ayasofya.jpg" alt="ayasofya" style="width: 600px">
+  </a></h6> <br><br>
+<p>''Mimar olmak, mekâna değer katmak demektir'' Bina yapmak mimarlık değildir.</p>
+
+ <p> "Mimarlık için mekâna değer katmak gerekir. Yaptığım işlerden ben değil, içinde yaşayanlar hoşlanmalı. İnsanlar her gün gördükleri ve yaşadıkları mekânları sevmelidirler."</p>
+<br><br>
+ <h1> Mimarlık türleri(çeşitleri) nedir yazımıza gitmek ister misiniz?</h1>
+ <BR>
+   <h6> <a target="_blank" href="turleri.html">
+ <img src="SEHIR1.jpg" alt="ayasofya" style="width: 600px">
+ </a></h6> <br>
+<p>Mimarlık mesleği alt dalları hakkında bilgi sahibi olmak isteyenler binaları ve diğer fiziki yapıları inşa etme görevini üstlenen mimarların sektörel bazda uzmanlaştığı alanları merak eder. Mimarlar kendi içlerinde 8’e ayrılır. Politik mimar, aydınlatma mimarı, araştırma mimarı, restorasyon mimarı, şehir plancısı ve peyzaj mimarı olmak üzere farklı mimari türleri üzerinde yoğunlaşan mimarlar, iletişim yetenekleri ve takım oluşturma becerileri ile yaşam alanlarınızın kritik dengesini korurlar.
+  
+</p>
+<br><br>
+ <h1> Blog yazılarımıza gitmek ister misiniz?</h1>
+ <BR>
+   <h6> <a target="_blank" href="blog.html">
+ <img src="cafe.jpg" alt="ayasofya" style="width: 600px">
+ </a></h6> <br><br>
+<p>Cafe restoran iç mekan tasarımları mekanın konseptine ve geçirilen zamana uyumlu bir şekilde tasarlanmalıdır. Bunun nedeni ise bu alanların genellikle sosyalleşme alanları olmasından kaynaklanmaktadır. Bu açıdan bu mekanlar, dikkat çekici bir tasarıma sahip olmalıdır. Müşteri psikolojisine hakim olabilecek bir iç mimar ile beraber çalışıldığı takdirde ise etkili ve işlevsel alanlar yaratılmaktadır.
+</p>
+<br><br>
+ <h1>Haber yazılarımıza gitmek ister misiniz?</h1>
+ <BR>
+   <h6> <a target="_blank" href="haberlerr.html">
+ <img src="sosyal7.webp" alt="ayasofya" style="width: 600px">
+ </a></h6> <br><br>
+<p>Bodrum açıklıkları, giren ışık miktarını optimize etmek için cepheden dışa doğru hafifçe çıkıntı yaparken, zemin katta bahçe ve ormanla bağlantı duygusunu artıran çerçevesiz pencereler ve sürgülü kapılar kullanılmış. Yatak odalarının bulunduğu üst kattaki pencereler, mahremiyeti korumak ve ek gölgeleme ekipmanı ihtiyacını ortadan kaldırmak için daha küçük boyda tasarlanmış.
+</p>
+<br>
+<br>
+
+
+
+    
+
+</body>
+</html>

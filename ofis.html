@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Viewport, bir web sayfasında kullanıcının görüntüleyebildiği alandır. 
+      Viewport'lar cihaza göre farklılık gösterir; mobil cihazlarda daha küçük ebatta iken, masaüstü bilgisayarlarda ise ebatı büyüktür.-->
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="sayfa2.css">
+    <link rel="stylesheet" href="imageslider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="sosyalmedya.css">
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--<title>Responsive Navigation Menu Bar</title>-->
+    
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<title>Mimarlik</title>
+
+
+</head>
+<body>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="#">Mimarlık</a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#"></a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li class="nav-link">
+                        <a href="sayfa2.html">
+                            <i class="bx bx-home-alt icon"></i>
+                            <span class="text nav-text"></span>
+                        </a>
+                    </li>
+                    <li><a href="nedir.html">MIMARLIK
+                        <i class=""></i>
+                        </a>
+
+                    </li>
+                    <li><a href="turleri.html">TURLERI</a></li>
+                     <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="haberlerr.html">HABERLER</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<script>
+
+const body = document.querySelector("body"),
+      nav = document.querySelector("nav"),
+      modeToggle = document.querySelector(".dark-light"),
+      searchToggle = document.querySelector(".searchToggle"),
+      sidebarOpen = document.querySelector(".sidebarOpen"),
+      siderbarClose = document.querySelector(".siderbarClose");
+
+      let getMode = localStorage.getItem("mode");
+          if(getMode && getMode === "dark-mode"){
+            body.classList.add("dark");
+          }
+
+// js code to toggle dark and light mode
+      modeToggle.addEventListener("click" , () =>{
+        modeToggle.classList.toggle("active");
+        body.classList.toggle("dark");
+
+        // js code to keep user selected mode even page refresh or file reopen
+        if(!body.classList.contains("dark")){
+            localStorage.setItem("mode" , "light-mode");
+        }else{
+            localStorage.setItem("mode" , "dark-mode");
+        }
+      });
+
+// js code to toggle search box
+        searchToggle.addEventListener("click" , () =>{
+        searchToggle.classList.toggle("active");
+      });
+ 
+      
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+    nav.classList.add("active");
+});
+
+body.addEventListener("click" , e =>{
+    let clickedElm = e.target;
+
+    if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+        nav.classList.remove("active");
+    }
+});
+</script>
+<BR><BR><BR><BR><BR><BR><BR>
+    <div align="center">
+        <img src="icmekan3.jpg"lt="pol" width="800" height="500">
+        </div>
+        <br>
+    <h1 align="center">MİSAFİRLERİNİZİ BÜYÜLEYECEK VE ÇALIŞANLARINIZI MOTİVE EDECEK OFİS DEKORASYON FİKİRLERİ</h1>
+    <hr>
+   <br>
+<p>Her ne kadar kabul etmek istemeseniz de ofisinizde evinizden daha fazla zaman geçiriyorsunuz. Peki, evinizde iyi seçilmiş bir mobilya koleksiyonunuz, benzersiz sanat eserleriniz, çerçeveler içinde fotoğraflarınız, hatta ortamı kişiselleştirmek için eğlenceli vurgu ögeleriniz varken ofisinizde neden olmasın?</p>
+<p>Bu makalemizde “ayın çalışanı” fotoğrafı, masalara yerleştireceğiniz küçük bitkiler gibi çalışanlarınızı motive edecek ofis dekorasyon fikirleri ile misafirlerinize kurumsal kimliğinizi yansıtırken prestijinizi koruyabileceğiniz büyüleyici ofis dekorasyon fikirlerini bir araya topladık.</p>
+<p>Ofis ortamının olumlu bir enerji içermesi çok önemlidir. Havadar bir ofise yerleştirilecek çiçeklerin ortamın enerjisini yükselteceğini bilmek için iç mimar olmanız gerekmez. Ya da güneş ışığıyla dolu olmasa da yaratıcı dekorasyon fikirleriyle ofisinizin dinamiklerini değiştirebileceğinizi biliyorsunuzdur.</p>
+<br><h1 align="center">Ofis Dekorasyon Fikirleri: Güneş Işığından Yararlanın</h1>
+<p>Açık ofisinizi kapı tarafına çekmek ve yönetici ofisini cam kenarlarına konumlandırma fikri cazip gelebilir. Ancak bir seçeneğiniz varsa bunu tercih etmemenizi tavsiye ederiz.
+
+    İnsanlar güneş ışığı aldıklarında mutlu ve sağlıklı hissederler. Bu nedenle, ofis içinde en az zaman harcayan yöneticilere güneş ışığı alan odaları verirken çalışanlarınızı bundan mahrum bırakmanız pek de olumlu bir mesaj olmayacaktır.
+    
+    Açık ofisleri güneş ışığı alan bölümlere yerleştirip az güneş alan yerleri toplantı odasına ve ofiste en az zamanı geçiren kişilerin odalarına ayırmalısınız.
+    
+    Hâlihazırda bu hatayı yaptıysanız ve geri döndürebileceğiniz bir durum değilse, çalışanlarınızın güneş görmedikleri anlarda bile kendilerini iyi hissetmelerini sağlamak için ofisi bol miktarda aydınlatacak ürünler kullanabilirsiniz.</p>
+<br><br><h1 align="center">Ofis Dekorasyon Fikirleri: Bitkilerle Ortamı Canlandırın</h1>
+    <p>Bitkilerin çalışma alanına hayat verme gibi bir gücü vardır. Sağlıklı, bakımı kolay ve uzun ömürlü bir iç mekân bitkisi ofisinizin enerjisini de değiştirecektir. Ek olarak, bitkiler ofisinizin havasını sürekli temizleyerek çalışanlarınızın motivasyonunu yükseltecek ve içeride her zaman oksijen kalmasına yardımcı olacaktır.</p>
+    <br><h1 align="center">Ofis Dekorasyon Fikirleri: Toplantı Odalarınıza Tema Belirleyin</h1>
+    <p>Klasik toplantı odası mobilyalarıyla döşenmiş Toplantı Odası 1’de gerçekleşecek bir toplantının sıkıcı geçeceğine şüpheniz olmaz. Peki, Star Wars temalı dekore edilmiş bir toplantı odasında gerçekleşecek toplantı fikrine ne dersiniz? Eğlenceli olacağa benziyor!</p>
+    <p>Gündelik yaşamdan fikirleri içeren temalar kullanabileceğiniz gibi ürün ve hizmetlerinizin mizah yönünü yansıtan ofis dekorasyon fikirleri de geliştirebilirsiniz. Böylece, ekibinize neden burada olduklarını hatırlatırken, çalışanlarınızın ürünün daha içinde olmalarını sağlayabilirsiniz.</p>
+    <p>Örneğin, Apple Inc binasında iMac Konferans Salonu ve iPod Konferans Salonu yer alıyor. Ürünlerin tarihi gelişimlerini anlatan fotoğraflar ve motive edici sözlerin çerçeve içinde duvarda asılı oluşu şirket vizyonunu oldukça iyi yansıtıyor.</p>
+    <br><h1 align="center">Ofis Dekorasyon Fikirleri: Markanızla Bağdaşacak Renkler ve Çizgiler Kullanın</h1>
+    <p>Ofis dekorasyon fikirleri üretirken renk kullanımı konusunda tıkanabilirsiniz. Öyleyse size bir çıkış yolu sunalım: marka renklerinizi ofisinizin her köşesinde kullanabilirsiniz.
+
+        Şirketinizi sektörde yenilikçi ve yaratıcı olarak konumlandırıyorsanız, bunu ofis dekorasyon fikirleri içinde de görmeliyiz. Markanızın ana rengi deniz mavisi ise ofisinizin en büyük duvarını bu renge boyayabilirsiniz.</p>
+<p>Pazarlama ekibinizin ürünlerinizi pazarlamada kullandığı sloganları baskı alabilir ve markanızın yan rengindeki çerçevelerde sergileyebilirsiniz.</p>
+<div class="ikonlar">
+    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+    <a href="#" class="google"><i class="fa fa-google"></i></a>
+    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+    <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+    </div>
+</body>
+</html>
