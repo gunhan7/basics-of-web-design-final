@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Viewport, bir web sayfasında kullanıcının görüntüleyebildiği alandır. 
+      Viewport'lar cihaza göre farklılık gösterir; mobil cihazlarda daha küçük ebatta iken, masaüstü bilgisayarlarda ise ebatı büyüktür.-->
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="sayfa2.css">
+    <link rel="stylesheet" href="imageslider.css">
+    <link rel="stylesheet" href="turleri.css">
+    <link rel="stylesheet" href="turlerden.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="sosyalmedya.css">
+        
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--<title>Responsive Navigation Menu Bar</title>-->
+    
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<title>Mimarlik</title>
+
+</head>
+<body>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="sayfa2.html">Mimarlık</a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#"></a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li class="nav-link">
+                        <a href="sayfa2.html">
+                            <i class="bx bx-home-alt icon"></i>
+                            <span class="text nav-text"></span>
+                        </a>
+                    </li>
+                    <li><a href="nedir.html">MİMARLIK
+                        <i class=""></i>
+                        </a>
+                    </li>
+                    <li><a href="turleri.html">TÜRLERİ</a></li>
+                     <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="haberlerr.html">HABERLER</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<script>
+
+const body = document.querySelector("body"),
+      nav = document.querySelector("nav"),
+      modeToggle = document.querySelector(".dark-light"),
+      searchToggle = document.querySelector(".searchToggle"),
+      sidebarOpen = document.querySelector(".sidebarOpen"),
+      siderbarClose = document.querySelector(".siderbarClose");
+
+      let getMode = localStorage.getItem("mode");
+          if(getMode && getMode === "dark-mode"){
+            body.classList.add("dark");
+          }
+
+// js code to toggle dark and light mode
+      modeToggle.addEventListener("click" , () =>{
+        modeToggle.classList.toggle("active");
+        body.classList.toggle("dark");
+
+        // js code to keep user selected mode even page refresh or file reopen
+        if(!body.classList.contains("dark")){
+            localStorage.setItem("mode" , "light-mode");
+        }else{
+            localStorage.setItem("mode" , "dark-mode");
+        }
+      });
+
+// js code to toggle search box
+        searchToggle.addEventListener("click" , () =>{
+        searchToggle.classList.toggle("active");
+      });
+ 
+      
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+    nav.classList.add("active");
+});
+
+body.addEventListener("click" , e =>{
+    let clickedElm = e.target;
+
+    if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+        nav.classList.remove("active");
+    }
+});
+</script>
+<div align="center"><img src="foto5.jpg" max-width: 1500px ></div>
+<BR><BR><BR><BR>
+<h1 align="center">MİMARLIK MESLEĞİ TÜRLERİ(ÇEŞİTLERİ) HAKKINDA BİLGİ</h1>
+<hr>
+<P>Mimarlık mesleği alt dalları hakkında bilgi sahibi olmak isteyenler binaları ve diğer fiziki yapıları inşa etme görevini üstlenen mimarların sektörel bazda uzmanlaştığı alanları merak eder. 
+    Mimarlar kendi içlerinde 8’e ayrılır. Politik mimar, aydınlatma mimarı, araştırma mimarı, restorasyon mimarı, şehir plancısı ve peyzaj mimarı olmak üzere farklı mimari türleri üzerinde yoğunlaşan mimarlar, iletişim yetenekleri ve takım oluşturma becerileri ile yaşam alanlarınızın kritik dengesini korurlar.</P>
+<BR><P>Problem çözme becerileri ve analitik yönleri ile ön plana çıkan mimarlar sonuçların yetkinliklerini fen ve matematik becerileri ile bütünleştirerek yaşam alanlarının çok daha aktif olmasına yardımcı olur. Politik mimarlar, mimarlığın doğası gereği politik olduğunu savunurlar. Politik mimarlara göre mimarlık yalnızca iyi görünen çıktılar yaratmak değil, bunun ötesinde toplum örgütlenmesinde bir değer karşılığı bulunması demektir. Aydınlatma mimarları, deneyimlerin küçük alanlarda da geliştirilebileceğini savunur. 
+    Bir başka mimari tür olan araştırma mimarlığında dijital araçların ve tasarımın güçlü algısı ön planda tutulur.</P>
+<BR><P>Mimariyi bir kültür disiplini olarak ele alan restorasyon mimarı ise binaların restore edilerek aslının korunması için çalışırlar. Şehir plancısı olarak görev alan mimarlar, problem çözme ve uyumu en büyük sorumlulukları olarak görürler. Sürdürülebilir kalkınma, demografik değişimler ve ekonomik durum göz önünde bulundurularak şehirciliğin koşullarını bir bütün halinde ele alan şehir plancılarının yanı sıra dış mekanların tasarımı için görev alan peyzaj mimarları da kentsel ve kırsal alanların bir bütün halinde tasarlanmasına olanak tanır.</P>
+   <br><br>
+
+   <h3>DIŞ MİMARLIK HAKKINDA BİLGİ ALMAK İÇİN GÖRSELİ TIKLAYINIZ</H3>
+    <div class="gallery" >
+        <a target="_blank" href="dis.html" >
+          <img src="dis.jpg" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <div class="desc">DIŞ MİMARLIK</div>
+      </div>
+
+
+      <h3>İÇ MİMARLIK HAKKINDA BİLGİ ALMAK İÇİN GÖRSELİ TIKLAYINIZ</H3>
+        <div class="gallery" >
+            <a target="_blank" href="ic.html" >
+              <img src="ic.jpg" alt="Cinque Terre" width="600" height="400">
+            </a>
+            <div class="desc">İÇ MİMARLIK</div>
+          </div>
+
+
+
+      <h3> PEYZAJ MİMARI HAKKINDA BİLGİ ALMAK İÇİN GÖRSELİ TIKLAYINIZ</H3>
+        <div class="gallery">
+          <a target="_blank" href="PEYZAJ.html">
+            <img src="peyzaj.jpg" alt="Mountains" width="600" height="400">
+          </a>
+          <div class="desc">PEYZAJ MİMARI</div>
+        </div>
+
+        <h3> ŞEHİR MİMARI HAKKINDA BİLGİ ALMAK İÇİN GÖRSELİ TIKLAYINIZ</H3>
+          <div class="gallery">
+            <a target="_blank" href="sehir.html">
+              <img src="şehir.jpg" alt="Mountains" width="600" height="400">
+            </a>
+            <div class="desc">ŞEHİR MİMARI</div>
+          </div>
+
+          <h3> POLİTİK MİMAR HAKKINDA BİLGİ ALMAK İÇİN GÖRSELİ TIKLAYINIZ</H3>
+            <div class="gallery" >
+                <a target="_blank" href="politik.html" >
+                  <img src="politik.jpg" alt="Cinque Terre" width="600" height="400">
+                </a>
+                <div class="desc">POLİTİK MİMAR</div>
+              </div>
+
+          <h3> AYDINLATMA MİMARI HAKKINDA BİLGİ ALMAK İÇİN GÖRSELİ TIKLAYINIZ</H3>
+            <div class="gallery">
+              <a target="_blank" href="aydinlatma.html">
+                <img src="aydinlatma.jpg" alt="Northern Lights" width="600" height="400">
+              </a>
+              <div class="desc">AYDINLATMA MİMARI</div>
+            </div>
+      
+            <h3> RESTORASYON MİMARI HAKKINDA BİLGİ ALMAK İÇİN GÖRSELİ TIKLAYINIZ</H3>
+            <div class="gallery">
+              <a target="_blank" href="restorasyon.html">
+                <img src="restorasyon.jpg" alt="Mountains" width="600" height="400">
+              </a>
+              <div class="desc">RESTORASYON MİMARI</div>
+            </div>
+
+      <h3> ARAŞTIRMA MİMARI HAKKINDA BİLGİ ALMAK İÇİN GÖRSELİ TIKLAYINIZ</H3>
+      <div class="gallery">
+        <a target="_blank" href="araştırma.html">
+          <img src="araştırma.jpg" alt="Forest" width="600" height="400">
+        </a>
+        <div class="desc">ARAŞTIRMA MİMARI</div>
+      </div>
+      <div class="ikonlar">
+        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="google"><i class="fa fa-google"></i></a>
+        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+        </div>
+
+</body>
+</html>
