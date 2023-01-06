@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Viewport, bir web sayfasında kullanıcının görüntüleyebildiği alandır. 
+      Viewport'lar cihaza göre farklılık gösterir; mobil cihazlarda daha küçük ebatta iken, masaüstü bilgisayarlarda ise ebatı büyüktür.-->
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="sayfa2.css">
+    <link rel="stylesheet" href="imageslider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="sosyalmedya.css">
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--<title>Responsive Navigation Menu Bar</title>-->
+    
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<title>Mimarlik</title>
+
+
+</head>
+<body>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="#">Mimarlık</a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#"></a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li class="nav-link">
+                        <a href="sayfa2.html">
+                            <i class="bx bx-home-alt icon"></i>
+                            <span class="text nav-text"></span>
+                        </a>
+                    </li>
+                    <li><a href="nedir.html">MIMARLIK
+                        <i class=""></i>
+                        </a>
+
+                    </li>
+                    <li><a href="turleri.html">TURLERI</a></li>
+                     <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="haberlerr.html">HABERLER</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<script>
+
+const body = document.querySelector("body"),
+      nav = document.querySelector("nav"),
+      modeToggle = document.querySelector(".dark-light"),
+      searchToggle = document.querySelector(".searchToggle"),
+      sidebarOpen = document.querySelector(".sidebarOpen"),
+      siderbarClose = document.querySelector(".siderbarClose");
+
+      let getMode = localStorage.getItem("mode");
+          if(getMode && getMode === "dark-mode"){
+            body.classList.add("dark");
+          }
+
+// js code to toggle dark and light mode
+      modeToggle.addEventListener("click" , () =>{
+        modeToggle.classList.toggle("active");
+        body.classList.toggle("dark");
+
+        // js code to keep user selected mode even page refresh or file reopen
+        if(!body.classList.contains("dark")){
+            localStorage.setItem("mode" , "light-mode");
+        }else{
+            localStorage.setItem("mode" , "dark-mode");
+        }
+      });
+
+// js code to toggle search box
+        searchToggle.addEventListener("click" , () =>{
+        searchToggle.classList.toggle("active");
+      });
+ 
+      
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+    nav.classList.add("active");
+});
+
+body.addEventListener("click" , e =>{
+    let clickedElm = e.target;
+
+    if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+        nav.classList.remove("active");
+    }
+});
+</script>
+<BR><BR><BR><BR><BR><BR><BR>
+
+    <h1 align="center">İspanya’da Farklı Bir Okul: Reggio School</h1><br>
+    <hr>
+    <div align="center">
+    <p>Andrés Jaque liderliğindeki Office for Political Innovation (OFFPOLINN), Madrid’in kuzeyinde, başkentin en seçkin bölgelerinden biri olan Moraleja bölgesini çevreleyen Encinar de los Reyes semtinde, Reggio School adında farklı bir eğitim yapısı tasarlamış.</p><br>
+    <img src="1.jpg"lt="pol" width="600" height="400"><br>
+    <p>Projenin çıkış noktası, farklı öğrencilerin keşfetme ve eğitim isteklerini artıracak bir mimari alan inşa etmek olmuş. Güçlü bir çocuk imajı, çok rollü öğretmen, zengin ve eğitici bir çevre, güçlü ilişkiler, proje tabanlı öğrenme gibi prensipler benimseyen Reggio Emilia yaklaşımında eğitim verecek olan okul için Andrés Jaque tarafından önerilen tasarım, öğrencilerin eğitim düzeyine göre üst üste dizilmiş bir dizi parçadan oluşuyor.</p>
+<br>
+<img src="2.jpg"lt="pol" width="600" height="400"><br>
+<p>Okulun inşaatında, sürdürülebilir çözümlerin uygulanmasından vazgeçmeden, düşük bütçeli bir strateji izlenmiş.
+    Yapının girişi alt sınıflara giden öğrenciler için sınıfların yerleştirildiği arazi ile bağlantılı bir zemin katıyla başlayacak şekilde planlanmış.</p>
+    <img src="3.jpg"lt="pol" width="600" height="400"><br>
+    <p>Üst katlarda su-toprak depoları ile sera-bahçe yanında orta sınıf öğrenciler; iç bahçe etrafında şekillenen ikinci katta ise daha üst sınıf öğrenciler için alanlar tasarlanmış.
+        Bu kat dağılımı, öğrencilerin okul ekosistemini kendi başlarına ve akranlarıyla birlikte keşfetme kapasitelerinin artması için planlanmış.
+        </p>
+<br>
+<img src="4.jpg"lt="pol" width="600" height="400"><br>
+<p>Peyzaj ölçeğindeki kemerlerle çevresindeki ekosistemlere açılan büyük bir boşluk olarak biçimlendirilen ikinci kat, okulun ana sosyal meydanı olarak tasarlanmış. Buradaki mimari, öğretmenleri ve öğrencileri okul yönetimine katılmaya, çevredeki manzaralar ve bölgelerle etkileşime girmeye teşvik edecek şekilde inşa edilmiş. Bu 464 metrekarelik ve 8 metre yüksekliğe sahip merkezi alan, kozmopolit bir agora olarak tasarlanmış.</p>
+    <img src="5.jpg"lt="pol" width="600" height="400"><br>
+    <p>Ekolojist ve toprak bilimcilerinden oluşan bir ekip, özellikle böcek, kelebek, kuş ve yarasa topluluklarını barındırmak ve beslemek için küçük bahçeler tasarlamış. Bu bahçe; egzersiz yapmak gibi sıradan etkinliklerin yanı sıra, okulun bir topluluk olarak nasıl yürütüldüğü ve komşu alanlarla nasıl ilişki kurulabileceği hakkındaki konuşmaların yapılabileceği bir alan olarak hayata geçirilmiş.</p>
+        <br>
+        <img src="6.jpg"lt="pol" width="600" height="400"><br>
+        <p>Mimarinin genelde mekanik sistemleri gizlemeye yönelik çabalarına bir alternatif olarak bu yapıda tüm hizmetler görünür tutulmuş, böylece binayı aktif tutan sistemlerin öğrenciler tarafından algılanır olması sağlanmış. Binada boruların, kanalların, tellerin ve ızgaraların da malzeme ekosisteminin görsel bir parçası olmasına izin verilmiş.</p><br>
+        <br>
+        <img src="7.jpg"lt="pol" width="600" height="400"><br>
+        <p>Okul tasarımlarının %90’ında olduğu gibi, yatay olarak genişleyen bir yapı yerine karbon ayak izini en aza indirebilmek için dikey bir mimari tercih edilmiş.
+            Ofis binanın inşaatında giydirme, asma tavan, yükseltilmiş teknik döşeme, duvar kaplaması, havalandırmalı cephe kullanmamış. Binanın cephelerinde, çatılarında ve iç bölmelerinde kullanılan malzemelerinin büyük bir bölümü, ısı yalıtımı ve mekanik sistem dağıtımı gibi basit stratejilerle değiştirilerek %48 oranında enerji tasarrufu sağlanmış.
+            </p><br>
+        <br>
+        <img src="8.jpg"lt="pol" width="600" height="400"><br>
+        <p>Ofis tarafından bu proje için özel olarak geliştirilen en doğal çözüm olan mantar sarma ile ısı izolasyonu sağlanmış. Bina cephesinin %80’i mantarla kaplanarak, Madrid yönetmeliklerinin gerektirdiğinin iki katı ısı yalıtımı sağlanmış ve okulun ısıtılması sırasında tüketilen enerji pasif olarak %50 oranında azaltılmış. Ayrıca mantar dokusunun düzensiz yüzeyi, organik malzemenin birikmesine izin verecek şekilde tasarlanmış, böylece binanın kabuğunun ilerleyen yıllarda çok sayıda mikrobiyolojik mantar, bitki ve hayvan için yaşam alanı haline gelmesi planlanmış.</p><br>
+    </div>
+    <div class="ikonlar">
+        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="google"><i class="fa fa-google"></i></a>
+        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+        </div>
+</body>
+</html>
